@@ -10,11 +10,14 @@ go get github.com/jcchavezs/zipkin-instrumentation-go-elasticsearch
 
 ## Example
 
+```go
 func main() {
 	cfg := elasticsearch.Config{
-        Transport: eszipkin.NewTransport()
-    }
+		Transport: eszipkin.NewTransport()
+	}
+
 	es, _ := elasticsearch.NewClient(cfg)
 	log.Println(elasticsearch.Version)
 	log.Println(es.Info())
 }
+```
